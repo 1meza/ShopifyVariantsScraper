@@ -58,7 +58,7 @@ module.exports = {
                         embed.setColor('#9bd4ff')
                         embed.setAuthor('SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
                         embed.setFooter('Shopify Variants by SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')          
-                        message.channel.send(embed)
+                        message.channel.send({embeds: [embed]})
                         console.log('Variants found!')
                     }
                     // Setting up the command to deal with errors so it doesn't break
@@ -68,7 +68,7 @@ module.exports = {
                         embed.setColor('#9bd4ff')
                         embed.setAuthor('SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
                         embed.setFooter('Shopify Variants by SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
-                        message.channel.send(embed)
+                        message.channel.send({embeds: [embed]})
                     }
                     // This happens the most when anti-bot is up, you usually need to wait a few seconds for variants to be returned.
                 }, (error) => {
@@ -77,7 +77,7 @@ module.exports = {
                     embed.setColor('#9bd4ff')
                     embed.setAuthor('SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
                     embed.setFooter('Shopify Variants by SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
-                    message.channel.send(embed)
+                    message.channel.send({embeds: [embed]})
                 })
         }
         // If the wrong input is put into the command, this embed will be returned.
@@ -87,7 +87,7 @@ module.exports = {
             embed.setColor('#9bd4ff')
             embed.setAuthor('SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
             embed.setFooter('Shopify Variants by SnowIO', 'https://media.discordapp.net/attachments/805238476018155530/826651221493547008/SnowServicesLogo-removebg-preview.png')
-            message.channel.send(embed)
+            message.channel.send({embeds: [embed]})
         }
     }
 }
